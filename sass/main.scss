@@ -1,0 +1,25 @@
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+@import "base/animations";
+@import "base/base";
+@import "layout/header";
+
+@import "pages/home";
+
+
+@import "base/typography";
+@import "base/utilities";
+@import "components/button";
+
+
+/*
+COLORS:
+
+Light green: #A2B9AF  rgba(162, 185, 175)
+Medium green: #698C7D  rgba(105, 140, 125)
+Dark green: #465D53  rgba(70, 93, 83)
+
+*/
+
