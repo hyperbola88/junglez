@@ -101,6 +101,16 @@ body {
   padding: 15rem 5rem;
   margin-top: -20vh; }
 
+.section-features {
+  margin-top: -10rem;
+  padding: 20rem 5rem;
+  background-image: linear-gradient(to right bottom, rgba(162, 185, 175, 0.7), rgba(70, 93, 83, 0.7)), url("../img/features.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg); }
+
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -224,6 +234,20 @@ body {
       z-index: 100; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.8);
+  transition: all .2s; }
+  .feature-box__icon {
+    margin-bottom: .5rem;
+    filter: invert(48%) sepia(13%) saturate(1200%) hue-rotate(110deg) brightness(95%) contrast(80%); }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
 
 /*
 COLORS:
