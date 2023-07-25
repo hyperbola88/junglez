@@ -6,7 +6,7 @@
 
 .section-features {
    margin-top: -10rem;
-   padding: 20rem 5rem;
+   padding: 15rem 5rem;
    background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.7),
@@ -20,6 +20,12 @@
   & > * {
    transform: skewY(7deg);
   }
-  
+}
+
+.section-popular {
+   background-color: $color-grey-light-1;
+   padding: 20rem 5rem 10rem;
+   margin-top: -20vh;
+
 }
 

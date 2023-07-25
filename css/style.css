@@ -21,7 +21,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -103,7 +103,7 @@ body {
 
 .section-features {
   margin-top: -10rem;
-  padding: 20rem 5rem;
+  padding: 15rem 5rem;
   background-image: linear-gradient(to right bottom, rgba(162, 185, 175, 0.7), rgba(70, 93, 83, 0.7)), url("../img/features.jpg");
   background-size: cover;
   background-position: top;
@@ -111,10 +111,15 @@ body {
   .section-features > * {
     transform: skewY(7deg); }
 
+.section-popular {
+  background-color: #f7f7f7;
+  padding: 20rem 5rem 10rem;
+  margin-top: -20vh; }
+
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   display: inline-block;
   background-image: linear-gradient(to right, #A2B9AF, #465D53);
   -webkit-background-clip: text;
@@ -123,7 +128,7 @@ body {
   letter-spacing: 2px;
   transition: all .2s; }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(5deg);
+    transform: skewY(-2deg) skewX(-5deg);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -148,6 +153,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-big {
+  margin-top: 6rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -162,6 +170,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #698C7D;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #698C7D; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -248,6 +262,98 @@ body {
     filter: invert(48%) sepia(13%) saturate(1200%) hue-rotate(110deg) brightness(95%) contrast(80%); }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 40rem; }
+  .card__side {
+    height: 40rem;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(-180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #465D53, #A2B9AF); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #698C7D, #A2B9AF); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #A2B9AF, #fff); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+    .card__picture--1 {
+      background-image: url("../img/plant-card-1.jpg"); }
+    .card__picture--2 {
+      background-image: url("../img/plant-card-2.jpeg"); }
+    .card__picture--3 {
+      background-image: url("../img/plant-card-3.jpeg"); }
+  .card__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 15rem;
+    right: 1rem;
+    text-align: right;
+    width: 75%;
+    text-shadow: 1px 1px 5px #465D53; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(70, 93, 83, 0.7), rgba(105, 140, 125, 0.7)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(105, 140, 125, 0.8), rgba(162, 185, 175, 0.8)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(162, 185, 175, 0.8), rgba(255, 255, 255, 0.8)); }
+  .card__details {
+    padding: 1.5rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1rem;
+        padding: .5rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    margin-bottom: 4rem;
+    color: #fff; }
+  .card__price-only {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 /*
 COLORS:
