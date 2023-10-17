@@ -3,11 +3,19 @@
 }
 
 .u-margin-bottom-big {
-   margin-bottom: 6rem;
+   margin-bottom: 8rem;
+
+   @include size(tab-port) {
+      margin: 5rem;
+   }
 }
 
 .u-margin-bottom-medium {
-   margin-bottom: 3rem;
+   margin-bottom: 4rem;
+
+   @include size(tab-port) {
+      margin: 3rem;
+   }
 }
 
 .u-margin-bottom-small {
@@ -15,10 +23,11 @@
 }
 
 .u-margin-top-big {
-   margin-top: 6rem;
+   margin-top: 8rem;
 }
 
 .u-margin-top-small {
    margin-top: 3rem;
 }
+
 

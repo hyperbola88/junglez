@@ -1,31 +1,84 @@
-.heading-secondary {
-   font-size: 2.5rem;
-   text-transform: uppercase;
-   font-weight: 400;
-   display: inline-block;
-   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-   -webkit-background-clip: text;
-   background-clip: text;
-   color: transparent;
-   letter-spacing: 2px;
-   transition: all .2s;
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  //font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+}
 
-   &:hover {
-      transform: skewY(-2deg) skewX(-5deg);
-      text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
-   }
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.9rem;
+    animation: moveInLeft 1s ease-in;
+
+    @include size(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.25rem;
+    animation: moveInRight 1s ease-in;
+    backface-visibility: hidden;
+    margin-bottom: 50px;
+
+    @include size(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  @include size(tab-port) {
+      font-size: 3rem;
+  }
+
+  @include size(phone) {
+   font-size: 2.5rem;
+}
+
+  &:hover {
+    transform: skewY(-2deg) skewX(-5deg);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
 }
 
 .heading-tertiary {
-   font-size: $default-font-size;
-   font-weight: 700;
-   text-transform: uppercase;
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .paragraph {
-   font-size: 1.2rem;
+  font-size: $default-font-size;
 
-   &:not(:last-child) {
-      margin-bottom: 3rem;
-   }
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }

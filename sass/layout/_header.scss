@@ -7,10 +7,34 @@
        rgba($color-primary-light, 0.7),
        rgba($color-primary-dark, 0.7)
      ),
-     url("../img/header.jpg");
+     url("../img/header-small.jpeg");
    background-size: cover;
    background-position: top;
    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+   @media (min-resolution: 192dpi) and (min-width: 600px) {
+      background-image: linear-gradient(
+       to right bottom,
+       rgba($color-primary-light, 0.7),
+       rgba($color-primary-dark, 0.7)
+     ),
+     url("../img/header.jpg");
+   }
+
+   @media (min-width: 2000px) {
+      background-image: linear-gradient(
+       to right bottom,
+       rgba($color-primary-light, 0.7),
+       rgba($color-primary-dark, 0.7)
+     ),
+     url("../img/header.jpg");
+   }
+
+   @include size(phone) {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+   }
+
+   
  
    &__logo-box {
       position: absolute;
@@ -32,30 +56,8 @@
  }
  
  
- .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
  
-    &--main {
-      display: block;
-      font-size: 60px;
-      font-weight: 400;
-      letter-spacing: 50px;
-      animation: moveInLeft 1s ease-in;
-      backface-visibility: hidden;
-   }
-   
-   &--sub {
-      display: block;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 15px;
-      animation: moveInRight 1s ease-in;
-      backface-visibility: hidden;
-      margin-bottom: 50px;
-      
-   }
- }
+ 
  
  
  

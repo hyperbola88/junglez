@@ -8,13 +8,23 @@
     height: 5rem;
     width: 5rem;
     position: fixed;
-    top: 4rem;
-    right: 4rem;
+    top: 5rem;
+    right: 5rem;
     border-radius: 50%;
     z-index: 200;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
     text-align: center;
     cursor: pointer;
+
+    @include size(tab-port) {
+      top: 3rem;
+      right: 3rem;
+    }
+
+    @include size(phone) {
+      top: 2rem;
+      right: 2rem;
+    }
   }
 
   &__background {
@@ -22,14 +32,24 @@
     width: 4rem;
     border-radius: 50%;
     position: fixed;
-    top: 4.5rem;
-    right: 4.5rem;
+    top: 5.5rem;
+    right: 5.5rem;
     background-image: radial-gradient(
       $color-primary-light,
       $color-primary-dark
     );
     z-index: 100;
     transition: all 0.3s;
+
+    @include size(tab-port) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+
+    @include size(phone) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
   }
 
   &__nav {
@@ -91,7 +111,7 @@
   }
 
   &__checkbox:checked ~ &__background {
-    transform: scale(50);
+    transform: scale(90);
   }
 
   &__checkbox:checked ~ &__nav {

@@ -1,16 +1,24 @@
 .feature-box {
    background-color: rgba($color-white, .8);
-   font-size: 1.1rem;
-   padding: 1.5rem;
+   font-size: 1.5rem;
+   padding: 2.5rem;
    text-align: center;
    border-radius: 3px;
    box-shadow: 0 1.5rem 2rem rgba($color-black, .8);
    transition: all .2s;
 
+   @include size(tab-port) {
+      padding: 2rem;
+   }
+
 
    &__icon {
       margin-bottom: .5rem;
       filter: invert(48%) sepia(13%) saturate(1200%) hue-rotate(110deg) brightness(95%) contrast(80%);
+
+      @include size(tab-port) {
+         margin-bottom: 0;
+      }
    }
 
    &:hover {
