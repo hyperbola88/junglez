@@ -165,7 +165,7 @@
   }
 
   //VARIATION OF CARD FOR SMALLER SCREENS
-  @include size(tab-port) {
+    @media(max-width: 56.25em), only scree and (hover:none) {
     height: auto;
     border-radius: 3px;
     background-color: white;

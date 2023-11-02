@@ -2,13 +2,20 @@
   "name": "junglez",
   "version": "1.0.0",
   "description": "",
+  "browserslist": "last 10 versions",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "autoprefixer": "^10.4.16",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "postcss-cli": "^10.1.0"
   }
 }
